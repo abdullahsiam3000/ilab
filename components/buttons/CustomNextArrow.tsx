@@ -10,7 +10,6 @@ interface CustomArrowProps {
 }
 
 const CustomNextArrow: React.FC<CustomArrowProps> = ({
-  className,
   style,
   onClick,
   currentSlide = 0,
