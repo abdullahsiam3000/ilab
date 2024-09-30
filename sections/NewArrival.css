@@ -1,0 +1,12 @@
+.slick-slide.slick-active {
+  padding-right: 20px;
+}
+
+.partially-visible {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-slide.slick-active.partially-visible {
+  opacity: 1;
+}

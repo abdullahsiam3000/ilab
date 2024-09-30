@@ -1,0 +1,62 @@
+.textBlock {
+  position: relative;
+}
+.textBlock::before {
+  content: "";
+  position: absolute;
+  top: -300px;
+  left: -300px;
+  width: 728px;
+  height: 728px;
+  background: radial-gradient(
+    circle,
+    rgba(251, 176, 59, 0.3) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+
+  /* Add the animation */
+  animation: wave 6s infinite ease-in-out;
+}
+
+.imageBlock {
+  position: relative;
+}
+
+.imageBlock::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 728px;
+  height: 728px;
+  background: radial-gradient(
+    circle,
+    rgba(251, 176, 59, 0.3) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+
+  /* Add the animation */
+  animation: wave 6s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.02) translate(-50px, -50px); /* Slightly move and scale */
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.textBlock:hover::before {
+  transform: scale(1.1);
+}
